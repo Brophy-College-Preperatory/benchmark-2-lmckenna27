@@ -192,7 +192,7 @@ button#home-header:hover {
     padding: 20px;
     line-height: 20px;
 
-    display: flex;
+    display: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -245,33 +245,12 @@ iframe#home-body:hover {
     }
 }
 
-/* footer container */
-
-.container#footer {
-    padding-top: 36%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-p#footer {
-    color: #000000;
-    margin: 4px 5px;
-    font-family: "DM Sans", sans-serif;
-    text-decoration: none;
-    display: flex;
-}
-
 /* weather container */
 
 .container-wrapper#weather {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    border: 0px black solid;
 
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .container#weather {
@@ -282,7 +261,7 @@ p#footer {
     display: grid;
     gap: 2px;
 
-    border-radius: 15px;
+    border-radius: 10px;
     background: linear-gradient(to right, #f3efdf, #e2ddd2);
 }
 
@@ -300,9 +279,21 @@ p#footer {
     text-align: center;
 }
 
+.top#weather {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    padding-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .top-left#weather {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
 
     padding-top: 10px;
 
@@ -314,14 +305,14 @@ p#footer {
 
 .top-middle#weather {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
 
     padding-top: 10px;
 }
 
 .top-right#weather {
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 2;
 
     padding-top: 10px;
     padding-right: 10px;
@@ -334,7 +325,7 @@ p#footer {
 
 .bottom#weather {
     grid-column: 1 / span 3;
-    grid-row: 2;
+    grid-row: 3;
 
     padding-top: 3px;
     padding-bottom: 10px;
@@ -343,6 +334,21 @@ p#footer {
     justify-content: center;
     align-items: center;
     text-align: center; 
+}
+
+select#weather {
+    color: #000000;
+    margin: 4px 5px;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    
+    width: 100%;
+    padding: 5px;
+    margin-left: auto;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(to right, #f3efdf, #e2ddd2);
 }
 
 p#weather {
